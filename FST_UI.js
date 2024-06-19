@@ -12,7 +12,7 @@ function readFile(input) {
         let startTime = window.performance.now(); 
         fst = new FST(r.result);
         let reverseStart = window.performance.now();
-        revFST = fst.reverse();
+        revFST = fst.invert();
         let endTime = window.performance.now();
         let toPrint = "Read " + fst.numTransitions + " transitions in ";
         toPrint += (reverseStart - startTime) + " milliseconds.\n";

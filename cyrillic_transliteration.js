@@ -325,9 +325,9 @@ for (let l of "\r\n\t") {
     fst.addTransition("0", "0", l, l);
 }
 fst.addTransition("0", "0", "\u00AD", "\u00AD")
-let revFST = fst.reverse();
+let revFST = fst.invert();
 // If latin characters appear within Cyrillic script, simply leave them as they are.
-// This needs to be done after the reversal so we do not break the reversed transliteration.
+// This needs to be done after the invertion so we do not break the inverted transliteration.
 for (let l of "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") {
     fst.addTransition("0", "0", l, l);
 }

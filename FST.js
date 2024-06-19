@@ -274,7 +274,7 @@ class FST {
     }
     return outputs;
   }
-  reverse() {
+  invert() {
     const res = new FST(null,
       {epsilon_symbol: this.eps, loopMax: this.loopMax, defaultWeight: this.defaultWeight,
         weightType: this.weightType});
