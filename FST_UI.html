@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      <label for="attFile">Choose AT&T file:</label>
+      <input type="file" id="attFile" onchange="readFile(this)">
+    </p>
+    <p id="load_time"></p>
+    <p>
+      <label for="forward_input">Input text here:</label>
+      <input type="text" id="forward_input">
+      <input type="button" value="Transduce" onClick="transduce(fst, 'forward_input', 'forward_output')">
+    </p>
+    <p id="forward_output"></p>
+    <p>
+      <label for="backward_input">Input text here:</label>
+      <input type="text" id="backward_input">
+      <input type="button" value="Transduce reversed" onClick="transduce(revFST, 'backward_input', 'backward_output')">
+    </p>
+    <p id="backward_output"></p>
+    <script src="myFunctions.js"></script>
+    <script src="FST.js"></script>
+    <script src="FST_UI.js"></script>
+  </body>
+</html>
