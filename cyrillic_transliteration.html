@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      <label for="cyrillic_input">Input Cyrillic Text here:</label>
+      <textarea id="cyrillic_input" rows="4" cols="50"></textarea>
+      <input type="button" value="Transliterate to Latin script" onClick="transliterate()">
+    </p>
+    <p id="latin_output"></p>
+    <p>
+      <label for="latin_input">Input Cyrillic Text here:</label>
+      <textarea id="latin_input" rows="4" cols="50"></textarea>
+      <input type="button" value="Transliterate to Cyrillic script" onClick="transliterateReversed()">
+    </p>
+    <p id="cyrillic_output"></p>
+    <script src="myFunctions.js"></script>
+    <script src="FST.js"></script>
+    <script src="cyrillic_transliteration.js"></script>
+  </body>
+</html>
